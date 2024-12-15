@@ -82,12 +82,30 @@ To learn more about React Native, take a look at the following resources:
 # Correr el proyecto en diferentes entornos 
 Develop
 
-- npm run android:dev
+   Android
+
+   - npm run android:dev
+
+   ios
+
+   - npm run ios:dev
 
 Produccion
 
-- npm run android:prod
+   Android
+
+   - npm run android:prod
+
+   ios
+
+   - npm run ios:prod
 
 Staging
 
-- npm run android:staging
+   Android
+
+   - npm run android:staging
+
+   ios
+
+   - npm run ios:staging
