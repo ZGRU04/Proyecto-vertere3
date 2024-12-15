@@ -7,11 +7,15 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
+    "android:dev": "cross-env ENVFILE=.env.development react-native run-android",
+    "android:staging": "cross-env ENVFILE=.env.staging react-native run-android",
+    "android:prod": "cross-env ENVFILE=.env.production react-native run-android",
     "test": "jest"
   },
   "dependencies": {
     "react": "18.3.1",
-    "react-native": "0.76.5"
+    "react-native": "0.76.5",
+    "react-native-config": "^1.5.3"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -27,6 +31,7 @@
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
+    "cross-env": "^7.0.3",
     "eslint": "^8.19.0",
     "jest": "^29.6.3",
     "prettier": "2.8.8",
