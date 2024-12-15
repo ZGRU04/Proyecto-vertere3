@@ -10,6 +10,9 @@
     "android:dev": "cross-env ENVFILE=.env.development react-native run-android",
     "android:staging": "cross-env ENVFILE=.env.staging react-native run-android",
     "android:prod": "cross-env ENVFILE=.env.production react-native run-android",
+    "ios:dev": "ENVFILE=.env.development react-native run-ios",
+    "ios:staging": "ENVFILE=.env.staging react-native run-ios",
+    "ios:prod": "ENVFILE=.env.production react-native run-ios",
     "test": "jest"
   },
   "dependencies": {
