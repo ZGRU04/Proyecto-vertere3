@@ -85,6 +85,11 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        project.ext.envConfigFiles = [
+            debug: ".env.development",
+            release: ".env.production",
+            staging: ".env.staging",
+        ]
     }
     signingConfigs {
         debug {
