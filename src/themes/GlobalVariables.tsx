@@ -1,3 +1,7 @@
+export const configStyleVariables = {
+    buttomMode: 'outlined'
+};
+
 export const globalVariables = {
     primaryButton: {
         primary: '#0e112d',
@@ -7,4 +11,4 @@ export const globalVariables = {
         primary: '#0e112d',
         accent: '#ff4081'
     }
-}
+};

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native'
 import { TextInput } from 'react-native-paper'
+import { InputModeEnum } from '../../../../themes/imputs/enums/InputMode.enum';
+import { globalStyleInputColor } from '../../../../themes/imputs/globaStyleInputs';
 
 export const LoginFormScreen = () => {
     const [email, setEmail] = useState('');
@@ -13,17 +15,17 @@ export const LoginFormScreen = () => {
                 value={email}
                 onChangeText={email => setEmail(email)}
                 style={styles.input}
-                mode="outlined"
-                activeOutlineColor='#00d461'
+                mode={InputModeEnum.OUTLINED}
+                activeOutlineColor={globalStyleInputColor.outlineGreyColor}
             />
             <TextInput
-                label="Contraceña"
+                label="Contraseña"
                 value={password}
                 onChangeText={password => setPassword(password)}
                 style={styles.input}
-                mode="outlined"
+                mode={InputModeEnum.OUTLINED}
                 secureTextEntry={true}
-                activeOutlineColor='#00d461'
+                activeOutlineColor={globalStyleInputColor.outlineGreyColor}
             />
             <Text>
                 e: {email}  _  
