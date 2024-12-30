@@ -2,7 +2,8 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { LoginFormScreen } from '../components/LoginFormScreen';
 import { Button } from 'react-native-paper';
-import { globalVariables } from '../../../../themes/GlobalVariables';
+import { papersButtonVariables} from '../../../../themes/buttons/globalStyleButtons';
+import { ButtonModeEnum } from '../../../../themes/buttons/enums/ButtonMode.enum';
 
 export const LoginScreen = () => {
   return (
@@ -10,8 +11,8 @@ export const LoginScreen = () => {
         <Text style={styles.title}>Login</Text>
         <LoginFormScreen></LoginFormScreen>
         <Button
-            mode='contained'
-            theme={{ colors: globalVariables.primaryButton }}
+            mode={ButtonModeEnum.CONTAINED}
+            theme={{ colors: papersButtonVariables.primaryButton }}
         >Ingresar</Button>
     </View>
   )
