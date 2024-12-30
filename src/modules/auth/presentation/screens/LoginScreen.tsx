@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import { LoginFormScreen } from '../components/LoginFormScreen';
 import { Button } from 'react-native-paper';
 import { papersButtonVariables} from '../../../../themes/buttons/globalStyleButtons';
@@ -11,15 +11,17 @@ export const LoginScreen = () => {
     }
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Login</Text>
-            <LoginFormScreen></LoginFormScreen>
-            <Button
-                mode={ButtonModeEnum.CONTAINED}
-                theme={{ colors: papersButtonVariables.primaryButton }}
-                onPress={redirectToHome}
-            >Ingresar</Button>
-        </View>
+        <SafeAreaView style={{flex:1,  backgroundColor: 'white'}}>
+            <View style={styles.container}>
+                <Text style={styles.title}>Login</Text>
+                <LoginFormScreen></LoginFormScreen>
+                <Button
+                    mode={ButtonModeEnum.CONTAINED}
+                    theme={{ colors: papersButtonVariables.primaryButton }}
+                    onPress={redirectToHome}
+                >Ingresar</Button>
+            </View>
+        </SafeAreaView>
     )
 }
 
