@@ -27,10 +27,6 @@ export const LoginFormScreen = () => {
                 secureTextEntry={true}
                 activeOutlineColor={globalStyleInputColor.outlineGreyColor}
             />
-            <Text>
-                e: {email}  _  
-                p: {password}
-            </Text>
         </View>
     )
 }

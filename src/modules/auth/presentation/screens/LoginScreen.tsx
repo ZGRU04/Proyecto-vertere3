@@ -6,16 +6,21 @@ import { papersButtonVariables} from '../../../../themes/buttons/globalStyleButt
 import { ButtonModeEnum } from '../../../../themes/buttons/enums/ButtonMode.enum';
 
 export const LoginScreen = () => {
-  return (
-    <View style={styles.container}>
-        <Text style={styles.title}>Login</Text>
-        <LoginFormScreen></LoginFormScreen>
-        <Button
-            mode={ButtonModeEnum.CONTAINED}
-            theme={{ colors: papersButtonVariables.primaryButton }}
-        >Ingresar</Button>
-    </View>
-  )
+
+    const redirectToHome = () => {
+    }
+
+    return (
+        <View style={styles.container}>
+            <Text style={styles.title}>Login</Text>
+            <LoginFormScreen></LoginFormScreen>
+            <Button
+                mode={ButtonModeEnum.CONTAINED}
+                theme={{ colors: papersButtonVariables.primaryButton }}
+                onPress={redirectToHome}
+            >Ingresar</Button>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({

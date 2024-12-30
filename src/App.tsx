@@ -1,21 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import 'react-native-gesture-handler';
 
-import React from 'react';
-import { PaperProvider } from 'react-native-paper';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { LoginScreen } from './modules/auth/presentation/screens/LoginScreen';
+import { AuthNavigation } from './navigation/AuthNavigation';
+import { MainNavigator } from './navigation/MainNavigator';
+import { NavigationContainer } from '@react-navigation/native';
 
 export function App(): React.JSX.Element {
+	const isAuthenticated = true;
+
 	return (
-		<PaperProvider>
-			<SafeAreaView style={{flex:1,  backgroundColor: 'white'}}>
-				<LoginScreen></LoginScreen>
-			</SafeAreaView>
-		</PaperProvider>
+		<MainNavigator/>
+		//isAuthenticated ? <MainNavigator/> : <AuthNavigation/>
 	);
 }
