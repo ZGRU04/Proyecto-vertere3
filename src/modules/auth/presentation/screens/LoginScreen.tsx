@@ -1,16 +1,18 @@
 import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import { LoginFormScreen } from '../components/LoginFormScreen';
 import { Button } from 'react-native-paper';
+import { globalVariables } from '../../../../themes/GlobalVariables';
 
 export const LoginScreen = () => {
   return (
     <View style={styles.container}>
-        
         <Text style={styles.title}>Login</Text>
-        {/*  */}
         <LoginFormScreen></LoginFormScreen>
-        <Button mode='contained'>Ingresar</Button>
+        <Button
+            mode='contained'
+            theme={{ colors: globalVariables.primaryButton }}
+        >Ingresar</Button>
     </View>
   )
 }
