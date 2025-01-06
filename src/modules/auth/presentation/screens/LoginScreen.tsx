@@ -9,7 +9,6 @@ export const LoginScreen = () => {
     const router = useRouter();
 
     const formSubmited = (loginData: Login) => {
-        console.log('me ire a home')
         router.replace('/(protected)/home');
     }
 
@@ -17,7 +16,7 @@ export const LoginScreen = () => {
         <PaperProvider>
             <SafeAreaView style={{flex:1,  backgroundColor: 'white'}}>
                 <View style={styles.container}>
-                    <Text style={styles.title}>Loasdagin</Text>
+                    <Text style={styles.title}>Login</Text>
                     <LoginFormComponent onSubmit={formSubmited}></LoginFormComponent>
                 </View>
             </SafeAreaView>

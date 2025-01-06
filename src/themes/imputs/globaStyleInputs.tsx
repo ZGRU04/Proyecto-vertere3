@@ -5,5 +5,9 @@ export const globalStyleInputColor = {
 }
 
 export const globalStyleInputs = {
-
+    error: {
+        color: "red",
+        fontSize: 12,
+        marginBottom: 10,
+    }
 }
