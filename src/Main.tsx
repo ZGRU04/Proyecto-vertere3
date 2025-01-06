@@ -1,22 +1,13 @@
-import 'react-native-gesture-handler';
-
-import { AuthNavigation } from './navigation/AuthNavigation';
-import { MainNavigator } from './navigation/MainNavigator';
+import { View, Text } from "react-native"
+import { Button, Icon, Provider as PaperProvider } from 'react-native-paper';
+import { LoginScreen } from "./modules/auth/presentation/screens/LoginScreen";
 
 export const Main = () => {
-	const isAuthenticated = true;
+    const isAuthtenticated = false
 
-	return (
-		isAuthenticated ? <MainNavigator /> : <AuthNavigation/>
-	);
+  return (
+    <PaperProvider>
+      <LoginScreen/>
+    </PaperProvider>
+  )
 }
-
-{/* <AuthNavigation/> */}
-{/* <SafeAreaView style={{flex:1,  backgroundColor: 'white'}}>
-	<Text>Vertere 3</Text>
-	<Text>Entorno Actual: {Config.ENV}</Text>
-	<Text>API URL: {Config.API_URL}</Text>
-	<Button icon='pencil' >Hola mundo</Button>
-	<Icon name="magnify" size={24} color='black'></Icon>
-	<LoginScreen></LoginScreen>
-</SafeAreaView> */}
