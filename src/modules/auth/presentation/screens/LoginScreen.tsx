@@ -1,21 +1,28 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { LoginFormScreen } from '../components/LoginFormScreen';
-import { Button } from 'react-native-paper';
-import { papersButtonVariables} from '../../../../themes/buttons/globalStyleButtons';
-import { ButtonModeEnum } from '../../../../themes/buttons/enums/ButtonMode.enum';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { LoginFormComponent } from '../components/LoginForm';
+import { Login } from '../../domain/entities/login';
+import { useRouter } from 'expo-router';
+import { PaperProvider } from 'react-native-paper';
 
 export const LoginScreen = () => {
-  return (
-    <View style={styles.container}>
-        <Text style={styles.title}>Login</Text>
-        <LoginFormScreen></LoginFormScreen>
-        <Button
-            mode={ButtonModeEnum.CONTAINED}
-            theme={{ colors: papersButtonVariables.primaryButton }}
-        >Ingresar</Button>
-    </View>
-  )
+    const router = useRouter();
+
+    const formSubmited = (loginData: Login) => {
+        console.log('me ire a home')
+        router.replace('/(protected)/home');
+    }
+
+    return (
+        <PaperProvider>
+            <SafeAreaView style={{flex:1,  backgroundColor: 'white'}}>
+                <View style={styles.container}>
+                    <Text style={styles.title}>Loasdagin</Text>
+                    <LoginFormComponent onSubmit={formSubmited}></LoginFormComponent>
+                </View>
+            </SafeAreaView>
+        </PaperProvider>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -32,8 +39,15 @@ const styles = StyleSheet.create({
     },
     image: {
         width: 100,
-        height: 100, // Tamaño de la imagen
+        height: 100,
         borderRadius: 10,
         textAlign: 'center'
     },
 });
+
+/**
+ * validacion, de inputs campo requerido  user, 
+ * validacion de auth
+ * redireccion de botton
+ * alert de cuando algosale mal desde backend
+ */

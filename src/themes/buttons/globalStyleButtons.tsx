@@ -4,16 +4,19 @@
 export const globalStyleButtonsColor = {
     primaryColor: '#9e0c14',
     secondaryColor: '#0e112d',
-    accentDefault: '#ff4081'
+    accentDefault: '#ff4081',
+    fontColor: '#fff'
 }
 
 export const papersButtonVariables = {
     primaryButton: {
         primary: globalStyleButtonsColor.primaryColor,
         accent: globalStyleButtonsColor.accentDefault,
+        fontColor: globalStyleButtonsColor.fontColor
     },
     secondaryButton: {
         primary: globalStyleButtonsColor.secondaryColor,
-        accent: globalStyleButtonsColor.accentDefault
+        accent: globalStyleButtonsColor.accentDefault,
+        fontColor: globalStyleButtonsColor.fontColor
     }
 };
