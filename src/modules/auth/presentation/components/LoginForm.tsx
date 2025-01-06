@@ -84,9 +84,6 @@ export const LoginFormComponent = ({ onSubmit }: { onSubmit: (data: Login) => vo
             >
                 Ingresar
             </Button>
-            {/* <Button mode="contained" onPress={handleSubmit(submit)}>
-                Iniciar sesión
-            </Button> */}
         </View>
     )
 }
